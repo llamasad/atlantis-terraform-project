@@ -99,7 +99,7 @@ resource "aws_security_group" "development_public-sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-
+#trigger 
 resource "aws_network_interface" "development_web-server-nic" {
   subnet_id       = aws_subnet.development_public-subnet.id
   security_groups = [aws_security_group.development_public-sg.id]
